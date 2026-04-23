@@ -1,0 +1,34 @@
+Entity framework is tool in dotnet that helps us to work with database using c# code insted of sql wueries.
+Need:- less code, faster dvelopment and easy to implement
+
+Types of EF:
+ 1.EF        :- older version, heavy, works only on windows
+ 2.EF core   :- advance version, lighter works on cross platform
+
+ORM- object relational mapping
+    :- It maps c# to database framework and object to row
+            eg:-
+            public class Studet{
+                public string name{get,set};
+                public int id {get,set};
+                
+            }
+
+There are three types of coding approach:-
+1. code first approch     :- Start with coding fist i.e create c# classess , database will be created automatically
+2. databae fisrt approch  :- if database is already exist, then we need to craete classes.
+3. model first approch    :- design model first, then create database
+
+DB context:- 
+    -It is a main class that connects your application with databse.
+           public dbset<student> students {get,set}
+    -It is bridge between applicationa and database.
+
+Migration:-
+   -It is used to create or update database structure automatically.
+        eg:-
+            public String email{get,set}
+                Migration
+
+
+CRUD Operation:-(Create, Read, Updatae, Delete)
