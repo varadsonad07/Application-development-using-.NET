@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Varad\\OneDrive\\Desktop\\.net\\Experiment No. 01\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{81D3111D-56FE-3DA5-CE27-69814095033D}|Experiment No. 01\\Experiment No. 01.csproj|c:\\users\\varad\\onedrive\\desktop\\.net\\experiment no. 01\\experiment no. 01\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81D3111D-56FE-3DA5-CE27-69814095033D}|Experiment No. 01\\Experiment No. 01.csproj|solutionrelative:experiment no. 01\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Varad\\OneDrive\\Desktop\\.net\\Experiment No. 01\\Experiment No. 01\\Program.cs",
+              "RelativeDocumentMoniker": "Experiment No. 01\\Program.cs",
+              "ToolTip": "C:\\Users\\Varad\\OneDrive\\Desktop\\.net\\Experiment No. 01\\Experiment No. 01\\Program.cs",
+              "RelativeToolTip": "Experiment No. 01\\Program.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwHwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-07T07:46:00.61Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
