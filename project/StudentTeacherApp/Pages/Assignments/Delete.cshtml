@@ -1,0 +1,23 @@
+@page "{id:int}"
+@model StudentTeacherApp.Pages.Assignments.DeleteModel
+@{
+    ViewData["Title"] = "Delete Assignment";
+}
+
+<div class="mx-auto rounded border p-4" style="width: 400px;">
+    <h1>@ViewData["Title"]</h1>
+    <p>Are you sure you want to delete this assignment?</p>
+    <p>Id: @Model.Id</p>
+    <p>Title: @Model.Title</p>
+    <form method="post">
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-page="/Assignments/Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="alert alert-danger" role="alert">
+        @Model.ErrorMessage
+    </div>
+}

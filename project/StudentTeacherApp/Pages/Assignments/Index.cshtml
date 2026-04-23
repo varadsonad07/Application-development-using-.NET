@@ -1,0 +1,55 @@
+@page
+@model StudentTeacherApp.Pages.Assignments.IndexModel
+@{
+    ViewData["Title"] = "Assignments";
+}
+
+<h1>Assignments</h1>
+
+<p>
+    <a asp-page="Create" class="btn btn-primary">Create New</a>
+</p>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Teacher</th>
+                <th>Student</th>
+                <th>Status</th>
+                <th>Grade</th>
+                <th>Feedback</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var assignment in Model.listAssignments)
+            {
+                <tr>
+                    <td>@assignment.Id</td>
+                    <td>@assignment.Title</td>
+                    <td>@assignment.Description</td>
+                    <td>@assignment.TeacherName</td>
+                    <td>@assignment.StudentName</td>
+                    <td>@assignment.Status</td>
+                    <td>@assignment.Grade</td>
+                    <td>@assignment.Feedback</td>
+                    <td>
+                        <a href="/Assignments/Edit?id=@assignment.Id" class="btn btn-primary">Edit</a>
+                        <a href="/Assignments/Delete?id=@assignment.Id" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

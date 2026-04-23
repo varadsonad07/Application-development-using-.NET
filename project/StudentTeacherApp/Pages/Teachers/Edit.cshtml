@@ -1,0 +1,47 @@
+@page "{id:int}"
+@model StudentTeacherApp.Pages.Teachers.EditModel
+@{
+    ViewData["Title"] = "Edit Teacher";
+}
+
+<div class="row">
+    <h2>Edit Teacher</h2>
+    <form method="post">
+        <div class="row mb-3">
+            <label class="col-sm-4 col-form-label">Name*</label>
+            <div class="col-sm-8">
+                <input class="form-control" asp-for="Name" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-4 col-form-label">Email*</label>
+            <div class="col-sm-8">
+                <input class="form-control" asp-for="Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-4 col-form-label">Subject*</label>
+            <div class="col-sm-8">
+                <input class="form-control" asp-for="Subject" />
+                <span asp-validation-for="Subject" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 offset-sm-4 d-grid">
+                <button type="submit" class="btn btn-primary">Update</button>
+            </div>
+            <div class="col-sm-4 d-grid">
+                <a asp-page="/Teachers/Index" class="btn btn-secondary">Cancel</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="alert alert-danger" role="alert">
+        @Model.ErrorMessage
+    </div>
+}

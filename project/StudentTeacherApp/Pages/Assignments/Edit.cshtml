@@ -1,0 +1,72 @@
+@page "{id:int}"
+@model StudentTeacherApp.Pages.Assignments.EditModel
+@{
+    ViewData["Title"] = "Edit Assignment";
+}
+
+<div class="row">
+    <h2>Edit Assignment</h2>
+    <form method="post">
+        <div class="row mb-3">
+            <label class="col-sm-4 col-form-label">Title*</label>
+            <div class="col-sm-8">
+                <input class="form-control" asp-for="Title" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-4 col-form-label">Description*</label>
+            <div class="col-sm-8">
+                <textarea class="form-control" asp-for="Description"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-4 col-form-label">Teacher*</label>
+            <div class="col-sm-8">
+                <select class="form-control" asp-for="TeacherId" asp-items="Model.Teachers"></select>
+                <span asp-validation-for="TeacherId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-4 col-form-label">Student*</label>
+            <div class="col-sm-8">
+                <select class="form-control" asp-for="StudentId" asp-items="Model.Students"></select>
+                <span asp-validation-for="StudentId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-4 col-form-label">Status</label>
+            <div class="col-sm-8">
+                <input class="form-control" asp-for="Status" />
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-4 col-form-label">Grade</label>
+            <div class="col-sm-8">
+                <input class="form-control" asp-for="Grade" />
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-4 col-form-label">Feedback</label>
+            <div class="col-sm-8">
+                <textarea class="form-control" asp-for="Feedback"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 offset-sm-4 d-grid">
+                <button type="submit" class="btn btn-primary">Update</button>
+            </div>
+            <div class="col-sm-4 d-grid">
+                <a asp-page="/Assignments/Index" class="btn btn-secondary">Cancel</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="alert alert-danger" role="alert">
+        @Model.ErrorMessage
+    </div>
+}

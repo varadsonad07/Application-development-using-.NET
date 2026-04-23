@@ -1,0 +1,47 @@
+@page
+@model StudentTeacherApp.Pages.Students.IndexModel
+@{
+    ViewData["Title"] = "Students";
+}
+
+<h1>Students</h1>
+
+<p>
+    <a asp-page="Create" class="btn btn-primary">Create New</a>
+</p>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Class</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model.listStudents)
+            {
+                <tr>
+                    <td>@student.Id</td>
+                    <td>@student.Name</td>
+                    <td>@student.Email</td>
+                    <td>@student.Class</td>
+                    <td>
+                        <a href="/Students/Edit?id=@student.Id" class="btn btn-primary">Edit</a>
+                        <a href="/Students/Delete?id=@student.Id" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
